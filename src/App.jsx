@@ -2,10 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Title } from "./Title"
+import { Title } from "./Title/Title"
 import { Card } from "./Card/Card"
-import { InputWithState } from "./Input/InputWithState"
-import { InputWithEffect } from "./Input/InputWithEffect"
+// import { InputWithState } from "./Input/InputWithState"
+// import { InputWithEffect } from "./Input/InputWithEffect"
 
 function App() {
   const [count, setCount] = useState(1)
@@ -15,8 +15,8 @@ function App() {
       <Card link="https://react.dev" image={reactLogo} title="React" />
       <Card link="https://vite.dev" image={viteLogo} title="Vite" />
 
-      <InputWithState />
-      <InputWithEffect />
+      {/* <InputWithState />
+      <InputWithEffect /> */}
 
       <Title title="hello" />
       <Title title="Hi and welcome"></Title>
