@@ -1,0 +1,11 @@
+.inputWithState {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: azure;
+}
+
+.inputWithEffect {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: beige;
+}
