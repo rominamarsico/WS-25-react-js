@@ -6,12 +6,15 @@ import { Title } from "./Title/Title"
 import { Card } from "./Card/Card"
 import { InputWithState } from "./Input/InputWithState"
 import { InputWithEffect } from "./Input/InputWithEffect"
+import { GetData } from './GetData/GetData'
 
 function App() {
   const [count, setCount] = useState(1)
 
   return (
     <>
+      <GetData />
+
       <Card link="https://react.dev" image={reactLogo} title="React" />
       <Card link="https://vite.dev" image={viteLogo} title="Vite" />
 
