@@ -2,17 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Title } from "./Title/Title"
-import { Card } from "./Card/Card"
-import { InputWithState } from "./Input/InputWithState"
-import { InputWithEffect } from "./Input/InputWithEffect"
-import { GetData } from './GetData/GetData'
+import { Title } from "./components/Title/Title"
+import { Card } from "./components/Card/Card"
+import { InputWithState } from "./components/Input/InputWithState"
+import { InputWithEffect } from "./components/Input/InputWithEffect"
+import { GetData } from './components/GetData/GetData'
+import { Menu } from './components/Menu/Menu'
 
 function App() {
   const [count, setCount] = useState(1)
 
   return (
     <>
+      <Menu />
       <GetData />
 
       <Card link="https://react.dev" image={reactLogo} title="React" />

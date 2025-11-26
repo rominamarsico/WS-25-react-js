@@ -6,11 +6,9 @@ export function GetData() {
 
   // array
   const myArray = ["1", "2", "3", 4, 5, 6]
-  console.log(myArray[1]) // "2"
 
   // Object
   const myObject = { a: "1", b: "2", c: [1, 2, 3] }
-  console.log(myObject.a) // "1"
 
   const myJson = [{ a: "1", b: "2", c: "3" }, { a: "1", b: "2", c: "3" }, { a: "1", b: "2", c: "3" }]
 
@@ -24,31 +22,34 @@ export function GetData() {
         return response.json();
       })
       .then(data => {
-        console.log("country: ", data);
         setCountryData(data)
       }
       ).catch(error => console.log("error country: ", error))
   }, [])
 
-  if (!countryData) { return }
 
   return (
     <div className="container">
-      <div>
-        <span>Country: </span>
-        <span>{countryData[0].altSpellings.slice(1).join(", ")}</span>
-      </div>
-      <div>
-        <span>Capital: </span>
-        <span>{countryData[0].capital}</span>
-      </div>
-      <div>
-        <span>Languages: </span>
-        <span>{Object.values(countryData[0].languages).join(", ")}</span>
-      </div>
-      <div>
-        <span>Flag: </span>
-        <span>{countryData[0].flag}</span>
-      </div>
+      <div>{countryData ? (
+        <>
+          <div>
+            <span>Country: </span>
+            <span>{countryData[0].altSpellings.slice(1).join(", ")}</span>
+          </div>
+          <div>
+            <span>Capital: </span>
+            <span>{countryData[0].capital}</span>
+          </div>
+          <div>
+            <span>Languages: </span>
+            <span>{Object.values(countryData[0].languages).join(", ")}</span>
+          </div>
+          <div>
+            <span>Flag: </span>
+            <span>{countryData[0].flag}</span>
+          </div>
+        </>
+      ) : "sorry keine Daten"}</div>
+
     </div>)
 }
